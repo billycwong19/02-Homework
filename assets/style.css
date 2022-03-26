@@ -1,0 +1,96 @@
+:root {
+    --accent: rgb(155, 220, 220);
+    --gray: rgb(194, 194, 194);
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--gray);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+header h1 {
+    background-color: var(--accent);
+    padding: 1vh 2vw 1vh 5vw;
+    font-size: 3.75vh;
+    font-style: italic;
+    flex-grow: 1;
+}
+header h1 {
+    transition: all 0.5s ease-in-
+out;
+}
+
+header h1:hover {
+    box-shadow: inset 0px 0px 8px
+var(--accent), 0 0 30px
+var(--accent);
+    color: whitesmoke;
+}
+
+nav a {
+    font-size: 2.5vh;;
+    text-decoration: underline var(--accent) 5px;
+    color: black;
+    padding: 10px;
+
+}
+nav a:hover {
+    background-color: var(--accent);
+}
+nav ul {
+    /* border: solid black 1px; */
+    height: 100%;
+    Width: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 50vh;
+    justify-content: space-evenly;
+}
+.mainImage {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 100px;
+}
+.mainImage h1 {
+    position: relative;
+    background-color: var(--accent);
+    margin-top: -60px;
+    margin-right: 20px;
+    padding: 10px 10px;
+    font-size: large;
+}
+
+.mainImage h1:hover {
+    box-shadow: inset 0px 0px 8px
+var(--accent), 0 0 30px
+var(--accent);
+    color: whitesmoke;
+}
+
+#mainImage {
+    width: 100%;
+    max-height: 20vh;
+}
+
+@media screen and (max-width: 440px) {
+    header {
+        flex-direction: column;
+        align-content: center;
+    }
+    nav {
+        flex-flow: column wrap;
+    }
+    header h1 {
+        padding: 10px;
+    }
+}
