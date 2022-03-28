@@ -1,6 +1,7 @@
 :root {
     --accent: rgb(155, 220, 220);
     --gray: rgb(194, 194, 194);
+    --darkgray: rgb(123, 123, 123);
 }
 * {
     font-family: Arial, Helvetica, sans-serif;
@@ -62,17 +63,17 @@ nav a:hover {
 }
 
 .mainImage {
-    height: 10vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-bottom: 72px;
+    background-color: whitesmoke;
 }
+
 .mainImage h1 {
     position: relative;
     background-color: var(--accent);
-    margin-top: -60px;
+    top: -60px;
     margin-right: 0;
     padding: 10px 10px;
     font-size: large;
@@ -90,7 +91,9 @@ var(--accent);
 
 #mainImage {
     width: 100%;
-    max-height: 20vh;
+    height: 20vh;
+    object-fit: cover;
+    
 }
 
 main section{
@@ -98,10 +101,11 @@ main section{
     flex-wrap: wrap;
     align-items: center;
     /* border: solid black 2px; */ 
-    padding-top: 20px;
-    margin: 10px 0px;
+
+    margin: 0px 0px;
     width: 100vw;
     background-color: whitesmoke;
+
 }
 
 .cardHeader {
@@ -113,69 +117,108 @@ main section{
     text-align: right;
     position: relative;
     right: 50px;
-    color: var(--accent);
-    text-shadow: var(--gray) 1px 1px;
+    color: var(--darkgray);
+    text-shadow: var(--accent) 2px 2px;
 }
 
 .cardInfo {
     width: 60vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    height: auto;
+    justify-content: space-around;
+}
+#about {
+    padding: 20px 0;;
 }
 
 #work img {
-    border: solid var(--accent) 3px;
+    border: solid var(--accent) 4px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#work img:hover {
+    border-width: 5px;
+    box-shadow: inset 0px 0px 8px
+var(--accent), 0 0 30px
+var(--accent);
 }
 
 #mainWorkCard {
     /* border: solid black 1px; */
     width: 100%;
     height: 100%;
+    margin: 0
 }
 #mainWorkCard img {
     width: 100%;
+    height: 40vh;
 }
 
-#mainWorkItem {
-    width: 100%;
-}
+
 .workCard {
     width: 50%;
+    padding: 0;
+    margin: 0;
+    align-self: center;
 }
 .workItem img {
     width: 100%;
-    
+    height: 30vh;
+
 }
 .workItem {
     width: 100%;
     height: 100%;
-    
+    padding: 0;
+    margin: 0;
 }
 
 .workImageHeader {
     position: relative;
-    top: -50px;
+    top: -70px;
     background-color: var(--accent);
     width: 50%;
     padding: 5px 5px;
     border-radius: 0 10px 10px 0;
 }
 
+#contact {
+    padding-bottom: 30px;
+}
 #contact ul {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-around;
 }
 
-#contact li {
-    width: auto;
-}
+
 #contact a {
     text-decoration: none;
-    color: var(--accent);
+    color: var(--darkgray);
+    padding: 10px 40px;
+    font-size: 30px;
+    font-style: italic;
 }
+
+#github {
+    position: relative;
+    top: 8px;
+}
+footer {
+    background-color: var(--accent);
+    padding-right: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    width: max-content;
+}
+
 @media screen and (max-width: 768px) {
     header, nav ul {
         flex-flow: column wrap;
@@ -199,7 +242,7 @@ main section{
         
     }
     nav a {
-        font-size: 3vh;
+        font-size: 18px;
     }
     
     nav li {
@@ -217,5 +260,37 @@ main section{
     .mainImage {
         align-items: center;
     }
-    
+    .mainImage h1 {
+        border-radius: 10px;
+    }
+    .cardHeader {
+        right: 0;
+        text-align: center;
+    }
+    .cardInfo {
+        width: 80vw;
+    }
+    #about h1 {
+        padding-bottom: 10px;
+    }
+
+    main section {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .workCard {
+        width: 100%;
+    }
+    #work .cardHeader h1 {
+        padding-bottom: 15px;
+    }
+    #mainWorkCard img {
+        width: 100%;
+        height: 30vh;
+    }
+
+    #contact h1 {
+        padding-bottom: 20px;
+    }
 }
